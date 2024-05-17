@@ -14,7 +14,7 @@ NAME= philo
 
 CC = gcc
 
-FLAGS = -Wall -Werror -Wextra
+CFLAGS = -Wall -Werror -Wextra
 
 RM = rm -rf
 
@@ -27,8 +27,8 @@ SRC = main.c \
 OBJ = $(SRC:.c=.o)
 
 $(NAME): $(OBJ)
-		$(CC) $(FLAGS) -c $(SRC)
-		$(CC) $(FLAGS) -o $(NAME) $(SRC)
+		$(CC) $(CFLAGS) -c $(SRC)
+		$(CC) $(CFLAGS) -o $(NAME) $(SRC)
 
 all: $(NAME)
 
