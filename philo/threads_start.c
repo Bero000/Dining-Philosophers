@@ -16,7 +16,7 @@
 int	check_dead_function(t_table *table, t_philo *philo)
 {
 	pthread_mutex_lock(&table->m_time);
-	if (get_time() - philo->last_eat > table->time_of_die)
+	if (get_time() - philo->last_eat >= table->time_of_die)
 	{
 		pthread_mutex_unlock(&table->m_time);
 		pthread_mutex_lock(&table->m_die);
